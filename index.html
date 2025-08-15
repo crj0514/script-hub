@@ -21,16 +21,14 @@
     <button onclick="showCode('rayfield')">Rayfield</button>
     <button onclick="showCode('tutorial')">Tutorial</button>
 
-
     <script>
-
         const codes = {
             rayfield: 'loadstring(game:HttpGet("https://pastebin.com/raw/hpiSM04q"))()',
             tutorial: 'loadstring(game:HttpGet("https://pastebin.com/raw/Us1VmvKB"))()'
         };
 
         function showCode(target) {
-            alert('${target.charAt(0).toUpperCase() + target.slice(1)} Code:\n${codes[target]}');
+            alert(`${target.charAt(0).toUpperCase() + target.slice(1)} Code:\n${codes[target]}`);
         }
     </script>
 </body>
