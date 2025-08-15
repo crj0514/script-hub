@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Roblox script hub</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding-top: 50px;}
+        button {
+            padding: 20px 40px;
+            margin: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Rayfield & Tutorial</h1>
+    <p>Choose one</p>
+
+    <button onlick="showCode('rayfield')">Rayfield</button>
+    <button onlick="showCode('tutorial')">Tutorial</button>
+
+
+    <script>
+        let selected = null;
+
+        const codes = {
+            rayfield: 'loadstring(game:HttpGet("https://pastebin.com/raw/hpiSM04q"))()',
+            tutorial: 'loadstring(game:HttpGet("https://pastebin.com/raw/Us1VmvKB"))()'
+        };
+
+        function showCode(target) {
+            alert('${target.charAt(0).toUpperCase() + target.slice(1)} Code:\n${codes[target]}');
+        }
+    </script>
+</body>
+</html>
